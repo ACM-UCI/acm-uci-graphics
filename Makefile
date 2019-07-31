@@ -3,9 +3,10 @@ clean:
 	rm -rf build
 	mkdir build
 	mkdir build/logo
+	mkdir build/mascots
 
 
-png: logo
+png: logo mascots
 
 
 logo: \
@@ -48,3 +49,10 @@ build/logo/acm_uci_black_%.png: logo/acm_uci_black.svg
 	inkscape -e $@ -w $* -h $* $< -b white
 build/logo/acm_uci_black_transparent_bkgd_%.png: logo/acm_uci_black.svg
 	inkscape -e $@ -w $* -h $* $<
+
+
+mascots: \
+	build/mascots/banana.png
+
+build/mascots/banana.png: mascots/banana.svg
+	inkscape -e $@ -w 1024 $<
