@@ -26,6 +26,10 @@ logo: \
 	build/logo/acm_uci_white_transparent_bkgd_256.png \
 	build/logo/acm_uci_white_transparent_bkgd_512.png \
 	build/logo/acm_uci_white_transparent_bkgd_1024.png \
+	build/logo/acm_uci_white_no_box_512.png \
+	build/logo/acm_uci_white_no_box_1024.png \
+	build/logo/acm_uci_white_no_box_transparent_bkgd_512.png \
+	build/logo/acm_uci_white_no_box_transparent_bkgd_1024.png \
 	build/logo/acm_uci_black_128.png \
 	build/logo/acm_uci_black_256.png \
 	build/logo/acm_uci_black_512.png \
@@ -43,6 +47,11 @@ build/logo/acm_uci_color_transparent_bkgd_%.png: logo/acm_uci_color.svg
 build/logo/acm_uci_white_%.png: logo/acm_uci_white.svg
 	inkscape -e $@ -w $* -h $* $< -b white
 build/logo/acm_uci_white_transparent_bkgd_%.png: logo/acm_uci_white.svg
+	inkscape -e $@ -w $* -h $* $<
+
+build/logo/acm_uci_white_no_box_%.png: logo/acm_uci_white_no_box.svg
+	inkscape -e $@ -w $* -h $* $< -b white
+build/logo/acm_uci_white_no_box_transparent_bkgd_%.png: logo/acm_uci_white_no_box.svg
 	inkscape -e $@ -w $* -h $* $<
 
 build/logo/acm_uci_black_%.png: logo/acm_uci_black.svg
