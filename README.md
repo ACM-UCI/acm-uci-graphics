@@ -1,7 +1,7 @@
 # ACM@UCI Graphics
 
 ```
-Let's get graphical
+Let's get graphical!
 ```
 
 Various graphics related to ACM@UCI. The Makefile can be used to convert the
